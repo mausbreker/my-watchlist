@@ -32,14 +32,17 @@ function Playground () {
     return (
         <>
             {
-                students.map((student) => {
+                students.map((student) => { 
                     return (
-                        <Student 
-                            fullName={student.fullName}
-                            average={student.average}
-                            passed={student.passed}
-                            jmbg={student.jmbg}
-                        />
+                        <div key={student.jmbg}>
+                            <Student 
+                                fullName={student.fullName}
+                                average={student.average}
+                                passed={student.passed}
+                                jmbg={student.jmbg}
+                            />
+                            <br />
+                        </div>
                     )
                 })
             }
