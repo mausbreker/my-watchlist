@@ -1,12 +1,23 @@
-import godfather from '../imgs/1c.jpg'
+import propTypes from 'prop-types';
 
-function WatchItem() {
+function WatchItem({movieObject}) {
     return (
         <article>
-            <img src={godfather} alt="godfather" />
-            <h6>The Godfather</h6>
+            <img 
+                src={movieObject.imagePath} 
+                alt={movieObject.title} 
+            />
+            <h3>{movieObject.title}, {movieObject.year}.</h3>
+            <h5>Ocjena: {movieObject.rating}</h5>
+            <button>
+                {movieObject.isFavorite ? "Makni iz favorita" : "Dodaj u favorite"}
+            </button>
         </article>
     )
 }
 
 export default WatchItem;
+
+WatchItem.propTypes = {
+    movieObject: propTypes.object
+}

@@ -1,3 +1,5 @@
+import propTypes from 'prop-types';
+
 function Student (props) {
     return (
         <>
@@ -10,3 +12,10 @@ function Student (props) {
 }
 
 export default Student;
+
+Student.propTypes = {
+    fullName: propTypes.string,
+    average: propTypes.number,
+    passed: propTypes.arrayOf(propTypes.string),
+    jmbg: propTypes.number
+}

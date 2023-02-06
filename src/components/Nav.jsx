@@ -1,23 +1,6 @@
-function Nav() {
-    const navList = [
-        {
-            url: "",
-            title: "All movies"
-        },
-        {
-            url: "favorites",
-            title: "Favorites"
-        },
-        {
-            url: "add",
-            title: "Add"
-        },
-        {
-            url: "search",
-            title: "Search"
-        }
-    ]
+import navList from '../data/nav.json';
 
+function Nav() {
     return (
         <ul>
             {

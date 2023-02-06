@@ -1,3 +1,5 @@
+import propTypes from 'prop-types';
+
 function Movie ({title, image}) {
     return (
         <>
@@ -11,3 +13,8 @@ function Movie ({title, image}) {
 }
 
 export default Movie;
+
+Movie.propTypes = {
+    image: propTypes.string,
+    title: propTypes.string
+}
