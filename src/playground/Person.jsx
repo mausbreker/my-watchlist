@@ -17,6 +17,7 @@ function Person(props) {
             <div>
                 Parties: {props.parties.map((party, index) => <div key={index}>{party}</div>)} 
             </div>
+            <button onClick={() => props.introducePerson(`${props.name} ${props.surname}`)}>Introduce</button>
             <hr />
         </>
     )

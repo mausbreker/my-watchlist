@@ -7,6 +7,8 @@ function Student (props) {
             <div>Prosjek: {props.average}</div>
             <div>Položeni kolegiji: {props.passed.join(', ')}</div>
             <div>JMBG: {props.jmbg}</div>
+            <button onClick={() => props.introducePerson(`${props.fullName}`)}>Introduce</button>
+            <hr />
         </>
     )
 }
