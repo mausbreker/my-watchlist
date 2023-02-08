@@ -6,6 +6,7 @@ import UserImage from './UserImage';
 import ClassSample from './ClassSample';
 import Person from './Person';
 import Student from './Student';
+import ReactStates from './ReactStates';
 
 function Playground () {
     const students = [
@@ -31,7 +32,8 @@ function Playground () {
 
     return (
         <>
-            {
+            <ReactStates />
+            {/* {
                 students.map((student) => { 
                     return (
                         <div key={student.jmbg}>
@@ -45,7 +47,7 @@ function Playground () {
                         </div>
                     )
                 })
-            }
+            } */}
             
             {/* <Movie 
                 title="Batman"
@@ -60,12 +62,12 @@ function Playground () {
             <Movie 
                 title="Spiderman"
                 image={spiderman}
-            />
+            /> */}
 
-            <UserImage />
-            <ClassSample />
+            {/* <UserImage />
+            <ClassSample /> */}
    
-            <Person 
+            {/* <Person 
                 name="Frane" 
                 surname="Bilić" 
                 birthday="16.04.1989" 
