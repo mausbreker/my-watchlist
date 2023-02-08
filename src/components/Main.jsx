@@ -2,6 +2,8 @@ import WatchItem from "./WatchItem";
 import movies from '../data/movies.json';
 
 function Main() {
+    const showRating = (movieName, rating) => {alert(`Rating filma ${movieName}: ${rating}`)};
+    
     return (
         <main>
             {
@@ -10,6 +12,7 @@ function Main() {
                         <WatchItem 
                             movieObject={movie}
                             key={movie.id}
+                            rating={showRating}
                         />
                     )
                 })

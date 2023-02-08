@@ -30,12 +30,12 @@ function Playground () {
         },
     ]
 
-    const introduction = (fullNameString) => {alert(`My name is ${fullNameString}`)}
+    const introduction = (fullNameString) => {alert(`My name is ${fullNameString}`)};
 
     return (
         <>
-            <Events />
-            {
+            {/* <Events /> */}
+            {/* {
                 students.map((student) => { 
                     return (
                         <div key={student.jmbg}>
@@ -50,7 +50,7 @@ function Playground () {
                         </div>
                     )
                 })
-            }
+            } */}
             
             {/* <Movie 
                 title="Batman"
