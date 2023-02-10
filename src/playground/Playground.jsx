@@ -7,6 +7,7 @@ import ClassSample from './ClassSample';
 import Person from './Person';
 import Student from './Student';
 import ReactStates from './ReactStates';
+import { useState } from 'react';
 
 function Playground () {
     const students = [
@@ -30,9 +31,19 @@ function Playground () {
         },
     ]
 
+    const [img, setImg] = useState(batman);
+
     return (
         <>
-            <ReactStates />
+            <img 
+                src={img} 
+                alt="" 
+                onMouseEnter={() => setImg(superman)}
+                onMouseLeave={() => setImg(batman)}
+            />
+            
+            {/* <ReactStates /> */}
+            
             {/* {
                 students.map((student) => { 
                     return (
