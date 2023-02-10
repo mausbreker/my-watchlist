@@ -8,6 +8,9 @@ import Person from './Person';
 import Student from './Student';
 import ReactStates from './ReactStates';
 import { useState } from 'react';
+import Iskaznica from './Iskaznica';
+import Accordion from './Accordion';
+import MoviesSearch from './MoviesSearch';
 
 function Playground () {
     const students = [
@@ -35,12 +38,20 @@ function Playground () {
 
     return (
         <>
-            <img 
+            <MoviesSearch />
+
+            {/* <Accordion />
+            <Accordion />
+            <Accordion /> */}
+
+            {/* <Iskaznica /> */}
+
+            {/* <img 
                 src={img} 
                 alt="" 
                 onMouseEnter={() => setImg(superman)}
                 onMouseLeave={() => setImg(batman)}
-            />
+            /> */}
             
             {/* <ReactStates /> */}
             
