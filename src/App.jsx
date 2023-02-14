@@ -7,15 +7,15 @@ import Playground from './playground/Playground';
 function App() {
   return (
     <div className="App">
-      {/* <Header />
+      <Header />
       <hr />
       <Main />
       <hr />
-      <Footer /> */}
+      <Footer />
 
       {/* [START] - playground */}
       
-      <Playground />
+      {/* <Playground /> */}
 
       {/* [END] - playground */}
     </div>

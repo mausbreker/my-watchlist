@@ -1,7 +1,8 @@
 import propTypes from 'prop-types';
+import { useState } from 'react';
 
-function WatchItem({movieObject, rating}) {
-const addToFavorites = () => console.log("Added to favorites");
+function WatchItem ({movieObject, rating}) {
+    const [isFavorite, setIsFavorite] = useState(movieObject.isFavorite);
 
     return (
         <article>
@@ -10,11 +11,12 @@ const addToFavorites = () => console.log("Added to favorites");
                 alt={movieObject.title} 
             />
             <h3>{movieObject.title}, {movieObject.year}.</h3>
-            <button onClick={() => rating(movieObject.title, movieObject.rating)}>Show rating</button>
-            <button onClick={addToFavorites}>
-                {movieObject.isFavorite ? "Makni iz favorita" : "Dodaj u favorite"}
+            {rating && <button onClick={() => rating(movieObject.title, movieObject.rating)}>Show rating</button>}
+            <button onClick={() => setIsFavorite(!isFavorite)}>
+                {
+                    isFavorite ? "Makni iz favorita" : "Dodaj u favorite"
+                }
             </button>
-            <hr />
         </article>
     )
 }

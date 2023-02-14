@@ -3,8 +3,6 @@ import WatchItem from '../components/WatchItem';
 import movies from '../data/movies.json';
 
 const MoviesSearch = () => {
-    const showRating = (movieName, rating) => {alert(`Rating filma ${movieName}: ${rating}`)};
-
     const [search, setSearch] = useState(movies);
     
     const inputSearch = (e) => {
@@ -23,7 +21,6 @@ const MoviesSearch = () => {
                         <WatchItem 
                             movieObject={movie}
                             key={movie.id}
-                            rating={showRating}
                         />
                     )
                 })
