@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import navList from '../data/nav.json';
 import '../styles/nav.scss'
 
@@ -9,7 +10,7 @@ function Nav() {
                     navList.map((navItem, index) => {
                         return (
                             <li key={index}>
-                                <a href={navItem.url}>{navItem.title}</a>
+                                <Link to={navItem.url}>{navItem.title}</Link>
                             </li>
                         )
                     })        
