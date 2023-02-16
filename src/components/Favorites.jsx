@@ -13,15 +13,8 @@ const Favorites = () => {
         return () => console.log('Komponenta umrla');
     }, [])
 
-    useEffect(() => {
-        console.log('Number se promijenio');
-    }, [number])
-
     return (
         <>
-            <button onClick={() => setNumber(number + 1)}>Uvećaj za 1</button>
-            <h3>{number}</h3>
-
             <div className="movies-wrap">
                 {
                     favoriteMovies.map(movie => {

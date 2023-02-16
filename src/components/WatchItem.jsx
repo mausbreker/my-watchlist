@@ -15,9 +15,7 @@ function WatchItem ({movieObject, rating}) {
             <h3>{movieObject.title}, {movieObject.year}.</h3>
             {rating && <button onClick={() => rating(movieObject.title, movieObject.rating)}>Show rating</button>}
             <button onClick={() => setIsFavorite(!isFavorite)}>
-                {
-                    isFavorite ? "💜" : "♡"
-                }
+                {isFavorite ? "💜" : "♡"}
             </button>
         </article>
     )
