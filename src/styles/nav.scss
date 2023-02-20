@@ -7,7 +7,7 @@
         padding: 0;
         margin: 0;
         display: flex;
-        justify-content:space-around;
+        justify-content: center;
         align-items: center;
         font-size: 24px;
 
@@ -22,6 +22,21 @@
 
                 &.active {
                     color: #27295A;
+                }
+
+                &.home-page {
+                    &.notification {
+                        &::before {
+                            content: '';
+                            width: 8px;
+                            height: 8px;
+                            border-radius: 50%;
+                            background-color: #27295A;
+                            position: absolute;
+                            top: 35px;
+                            right: 28px;
+                        }
+                    }
                 }
             }
 
